@@ -40,15 +40,15 @@ public class Run
         return null;
     }
 
-    public static Person[] heavyTallPeople(int x, int y, Person[] people)
+    public static ArrayList<Person> heavyTallPeople(int x, int y, Person[] people)
     {
-        Person[] persons = new Person[people.length];
+        ArrayList<Person> persons = new ArrayList<>();
         int currentPerson = 0;
         for (int i = 0; i < people.length; i++)
         {
             if(people[i].getHeight() > x &&  people[i].getWeight() > y)
             {
-                persons[currentPerson] = people[i];
+                persons.add(people[i]);
                 ++currentPerson;
             }
         }
